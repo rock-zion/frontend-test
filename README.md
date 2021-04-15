@@ -11,7 +11,7 @@ yarn
 # start server
 yarn start
 
-# check tests ✅
+# check tests
 yarn test
 ```
 
