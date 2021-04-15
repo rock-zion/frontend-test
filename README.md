@@ -32,7 +32,7 @@ probably going to want to do.
 - Loading states while the data is being fetched
 - Test coverage report
 - As important as the feature set is, keeping coding standards and code consistency is key
-- Use react query
+- Use react query or redux, whichever you are comfortable with.
 - Add type support by migrating to TypeScript
 
 ## Design
