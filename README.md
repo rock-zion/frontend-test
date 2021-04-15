@@ -30,6 +30,7 @@ probably going to want to do.
 
 - The UI has to be responsive
 - Loading states while the data is being fetched
+- Test coverage report
 - As important as the feature set is, keeping coding standards and code consistency is key
 - Use react query
 - Add type support by migrating to TypeScript
