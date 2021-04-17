@@ -37,7 +37,7 @@ export const NavigationStyle = styled.header`
     }
 
     .mobileMenu {
-      position: absolute;
+      position: fixed;
       top: 0;
       right: 0;
       height: 100vh;
