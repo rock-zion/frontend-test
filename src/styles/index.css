@@ -27,3 +27,17 @@ button {
   cursor: pointer;
   height: 48px;
 }
+
+.favouriteHeaderText {
+  color: beige;
+  font-size: 64px;
+  text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .favouriteHeaderText {
+    color: beige;
+    font-size: 24px;
+    text-align: center;
+  }
+}
