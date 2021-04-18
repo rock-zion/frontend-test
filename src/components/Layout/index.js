@@ -1,5 +1,9 @@
 import React, { useContext } from "react";
-import { PagesLayoutStyles, ButtonFavouriteLayoutStyle } from "./style.module";
+import {
+  PagesLayoutStyles,
+  ButtonFavouriteLayoutStyle,
+  MoreDetailsLayoutStyle,
+} from "./style.module";
 import { useHistory } from "react-router-dom";
 import unfavourited from "../../assets/icons/heart-line.svg";
 import favourited from "../../assets/icons/heart-fill.svg";
@@ -23,7 +27,12 @@ export const ButtonFavouriteLayout = ({ resource, url, name }) => {
     FavouritesContext
   );
   const handleLearnMore = () => {
-    history.push({ pathname: `${resource}/${name}`, url: { url } });
+    let splitURL = url.split("api/");
+    console.log("splitURL=> ", splitURL[1]);
+    history.push({
+      pathname: `${resource}/${name}/${splitURL[1]}`,
+      url: { url },
+    });
   };
   return (
     <ButtonFavouriteLayoutStyle>
@@ -42,5 +51,13 @@ export const ButtonFavouriteLayout = ({ resource, url, name }) => {
         />
       )}
     </ButtonFavouriteLayoutStyle>
+  );
+};
+
+export const MoreDetailsLayout = ({ children, bgImg, bannerText }) => {
+  return (
+    <MoreDetailsLayoutStyle>
+      <section className="children">{children}</section>
+    </MoreDetailsLayoutStyle>
   );
 };
