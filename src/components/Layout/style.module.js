@@ -68,7 +68,8 @@ export const PagesLayoutStyles = styled.div`
 
 export const ButtonFavouriteLayoutStyle = styled.div`
   display: flex;
-  button{
-    width: 80%
+  width: 100%;
+  button {
+    width: 80%;
   }
-`
+`;
