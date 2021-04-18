@@ -8,7 +8,7 @@ import vehicleImg from "../../assets/icons/vehicle.svg";
 import speciesImg from "../../assets/icons/species.svg";
 import { ButtonFavouriteLayout } from "../Layout/index";
 
-const MovieCard = ({ title, resource, seeMore }) => {
+const MovieCard = ({ moredetails, title, resource, seeMore }) => {
   const returnImage = (resource) => {
     if (resource === "films") {
       return filmImg;
@@ -25,14 +25,21 @@ const MovieCard = ({ title, resource, seeMore }) => {
     }
   };
   return (
-    <CardStyle>
+    <CardStyle moredetails={moredetails}>
       <img className="cardIcon" src={returnImage(resource)} alt="" />
-      <span className="detailsContainer">
-        <div>
-          <h1 className="headingText">{title}</h1>
-        </div>
-        <ButtonFavouriteLayout resource={resource} name={title} url={seeMore} />
-      </span>
+      {!moredetails && (
+        <span className="detailsContainer">
+          <div>
+            <h1 className="headingText">{title}</h1>
+          </div>
+
+          <ButtonFavouriteLayout
+            resource={resource}
+            name={title}
+            url={seeMore}
+          />
+        </span>
+      )}
     </CardStyle>
   );
 };
