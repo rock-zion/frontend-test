@@ -6,13 +6,9 @@ import planetImg from "../../assets/icons/planet.svg";
 import starshipImg from "../../assets/icons/starship.svg";
 import vehicleImg from "../../assets/icons/vehicle.svg";
 import speciesImg from "../../assets/icons/species.svg";
-import { useHistory } from "react-router-dom";
+import { ButtonFavouriteLayout } from "../Layout/index";
 
-export const MovieCard = ({ title, director, episode }) => {
-  const history = useHistory();
-  const handleLearnMore = () => {
-    history.push(`films/${title}`);
-  };
+export const MovieCard = ({ title, director, episode, seeMore }) => {
   return (
     <CardStyle>
       <img className="cardIcon" src={filmImg} alt="" />
@@ -22,19 +18,13 @@ export const MovieCard = ({ title, director, episode }) => {
           <span className="subTexts">Episode {episode}</span>
           <span className="body1">Directed By:{director}</span>
         </div>
-        <button onClick={() => handleLearnMore()} className="learnMore">
-          Learn More
-        </button>
+        <ButtonFavouriteLayout resource="films" name={title} url={seeMore} />
       </span>
     </CardStyle>
   );
 };
 
-export const CharacterCard = ({ name, height, mass }) => {
-  const history = useHistory();
-  const handleLearnMore = () => {
-    history.push(`people/${name}`);
-  };
+export const CharacterCard = ({ seeMore, name, height, mass }) => {
   return (
     <CardStyle>
       <img className="cardIcon characterIcon" src={characterImg} alt="" />
@@ -44,19 +34,13 @@ export const CharacterCard = ({ name, height, mass }) => {
           <span className="subTexts">Height: {height}</span>
           <span className="subTexts">Mass: {mass}</span>
         </div>
-        <button onClick={() => handleLearnMore()} className="learnMore">
-          Learn More
-        </button>
+        <ButtonFavouriteLayout resource="people" name={name} url={seeMore} />
       </span>
     </CardStyle>
   );
 };
 
-export const PlanetCard = ({ name, population, climate, terrain }) => {
-  const history = useHistory();
-  const handleLearnMore = () => {
-    history.push(`planets/${name}`);
-  };
+export const PlanetCard = ({ seeMore, name, population, climate, terrain }) => {
   return (
     <CardStyle>
       <img className="cardIcon planetIcon" src={planetImg} alt="" />
@@ -67,24 +51,19 @@ export const PlanetCard = ({ name, population, climate, terrain }) => {
           <span className="subTexts">Climate: {climate}</span>
           <span className="subTexts">Terrain: {terrain}</span>
         </div>
-        <button onClick={() => handleLearnMore()} className="learnMore">
-          Learn More
-        </button>
+        <ButtonFavouriteLayout resource="planets" name={name} url={seeMore} />
       </span>
     </CardStyle>
   );
 };
 
 export const SpeciesCard = ({
+  seeMore,
   name,
   classification,
   designation,
   language,
 }) => {
-  const history = useHistory();
-  const handleLearnMore = () => {
-    history.push(`species/${name}`);
-  };
   return (
     <CardStyle>
       <img className="cardIcon specieIcon" src={speciesImg} alt="" />
@@ -95,24 +74,19 @@ export const SpeciesCard = ({
           <span className="subTexts">Designation: {designation}</span>
           <span className="subTexts">Language: {language}</span>
         </div>
-        <button onClick={() => handleLearnMore()} className="learnMore">
-          Learn More
-        </button>
+        <ButtonFavouriteLayout resource="species" name={name} url={seeMore} />
       </span>
     </CardStyle>
   );
 };
 
 export const StarshipsCard = ({
+  seeMore,
   name,
   manufacturer,
   hyperdrive_rating,
   crew,
 }) => {
-  const history = useHistory();
-  const handleLearnMore = () => {
-    history.push(`starships/${name}`);
-  };
   return (
     <CardStyle>
       <img className="cardIcon starshipIcon" src={starshipImg} alt="" />
@@ -125,19 +99,19 @@ export const StarshipsCard = ({
           </span>
           <span className="subTexts">Crew : {crew}</span>
         </div>
-        <button onClick={() => handleLearnMore()} className="learnMore">
-          Learn More
-        </button>
+        <ButtonFavouriteLayout resource="starships" name={name} url={seeMore} />
       </span>
     </CardStyle>
   );
 };
 
-export const VehiclesCard = ({ name, manufacturer, vehicle_class, crew }) => {
-  const history = useHistory();
-  const handleLearnMore = () => {
-    history.push(`vehicles/${name}`);
-  };
+export const VehiclesCard = ({
+  seeMore,
+  name,
+  manufacturer,
+  vehicle_class,
+  crew,
+}) => {
   return (
     <CardStyle>
       <img className="cardIcon planetIcon" src={vehicleImg} alt="" />
@@ -148,9 +122,7 @@ export const VehiclesCard = ({ name, manufacturer, vehicle_class, crew }) => {
           <span className="subTexts">Vehicle Class: {vehicle_class}</span>
           <span className="subTexts">Crew: {crew}</span>
         </div>
-        <button onClick={() => handleLearnMore()} className="learnMore">
-          Learn More
-        </button>
+        <ButtonFavouriteLayout resource="vehicles" name={name} url={seeMore} />
       </span>
     </CardStyle>
   );
