@@ -31,6 +31,30 @@ function App() {
               <Route path="/starships" exact component={Pages.Starships} />
               <Route path="/vehicles" exact component={Pages.Vehicles} />
               <Route path="/favourites" exact component={Pages.Favourites} />
+              <Route
+                path="/films/:name/:url"
+                component={Pages.MoreDetailsPage}
+              />
+              <Route
+                path="/planets/:name/:url/:id"
+                component={Pages.MoreDetailsPage}
+              />
+              <Route
+                path="/starships/:name/:url/:id"
+                component={Pages.MoreDetailsPage}
+              />
+              <Route
+                path="/species/:name/:url/:id"
+                component={Pages.MoreDetailsPage}
+              />
+              <Route
+                path="/vehicles/:name/:url/:id"
+                component={Pages.MoreDetailsPage}
+              />
+              <Route
+                path="/people/:name/:url/:id"
+                component={Pages.MoreDetailsPage}
+              />
             </Switch>
           </Router>
         </QueryClientProvider>
