@@ -3,7 +3,7 @@ import { PagesLayout } from "../../components/Layout";
 import bg from "../../assets/images/films.jpeg";
 import { useLocation } from "react-router-dom";
 import { useQuery } from "react-query";
-import MovieCard from "../../components/MovieCard";
+import { MovieCard } from "../../components/Cards";
 import Loading from "../../components/Loading";
 
 const fetchFilms = async ({ queryKey }) => {
@@ -17,7 +17,6 @@ const fetchFilms = async ({ queryKey }) => {
 const HomePage = () => {
   const location = useLocation();
   const { data, status } = useQuery(["films", location], fetchFilms);
-  console.log(data);
   return (
     <PagesLayout bannerText={"Films"} bgImg={bg}>
       {status === "loading" && (
