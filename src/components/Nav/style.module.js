@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import backgroundShimmer from "../../assets/icons/bg-shimmer.gif";
+import backgroundShimmer from "../../assets/icons/bg-shimmer2.gif";
 
 export const NavigationStyle = styled.header`
   height: 70px;
@@ -39,7 +39,6 @@ export const NavigationStyle = styled.header`
   .webMenuLink:hover {
     background-image: url(${backgroundShimmer});
     background-size: cover;
-    margin-right: 32px;
     text-decoration: none;
     transform: scale(1.1);
     border-bottom: 2px solid red;
@@ -99,6 +98,7 @@ export const NavigationStyle = styled.header`
       width: 100vw;
       background-color: #0b213c;
       transition: all 0.3s;
+      z-index: 99999999999;
     }
 
     .mobileMenuOpen {
