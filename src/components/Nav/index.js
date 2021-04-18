@@ -23,7 +23,9 @@ const Navigation = () => {
   console.log(location);
   return (
     <NavigationStyle>
-      <img className={"logo"} src={logo} alt="starwars logo" />
+      <Link className={"logoContainer"} to="/">
+        <img className={"logo"} src={logo} alt="starwars logo" />
+      </Link>
       <div className={`links webMenu`}>
         {links.map((link) => (
           <Link
