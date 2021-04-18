@@ -28,3 +28,10 @@ export const Vehicles = loadable(() => import("../Pages/Vehicles"), {
 export const Favourites = loadable(() => import("../Pages/Favourites"), {
   LoadingComponent: Preloader,
 });
+
+export const MoreDetailsPage = loadable(
+  () => import("../Pages/ResourceDetails"),
+  {
+    LoadingComponent: Preloader,
+  }
+);
