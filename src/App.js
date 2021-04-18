@@ -30,6 +30,7 @@ function App() {
               <Route path="/species" exact component={Pages.Species} />
               <Route path="/starships" exact component={Pages.Starships} />
               <Route path="/vehicles" exact component={Pages.Vehicles} />
+              <Route path="/favourites" exact component={Pages.Favourites} />
             </Switch>
           </Router>
         </QueryClientProvider>

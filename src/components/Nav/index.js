@@ -14,6 +14,7 @@ const links = [
   "species",
   "starships",
   "vehicles",
+  "favourites",
 ];
 
 const Navigation = () => {

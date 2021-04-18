@@ -24,3 +24,7 @@ export const Starships = loadable(() => import("../Pages/Starships"), {
 export const Vehicles = loadable(() => import("../Pages/Vehicles"), {
   LoadingComponent: Preloader,
 });
+
+export const Favourites = loadable(() => import("../Pages/Favourites"), {
+  LoadingComponent: Preloader,
+});
