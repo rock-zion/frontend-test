@@ -28,13 +28,31 @@ export const PagesLayoutStyles = styled.div`
 
   .children {
     width: 100%;
+    height: fit-content;
     padding: 64px 120px;
-    color: #333333;
+    background-color: #0d1116;
+  }
+
+  .movieContainerParent {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 16px;
+  }
+
+  .loadingContainer {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
   }
 
   @media only screen and (max-width: 600px) {
     .page-banner {
       height: 200px;
+    }
+
+    .movieContainerParent {
+      grid-template-columns: 1fr;
     }
 
     .bannerText {
