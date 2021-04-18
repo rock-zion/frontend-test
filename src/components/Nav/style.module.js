@@ -10,8 +10,11 @@ export const NavigationStyle = styled.header`
   align-items: center;
   background-color: #000000;
 
-  .logo {
+  .logoContainer {
     height: 80%;
+  }
+  .logo {
+    height: 100%;
   }
 
   .menu {

@@ -8,7 +8,8 @@ export const CardStyle = styled.div`
   padding: 24px 16px;
   border-radius: 8px;
   display: flex;
-  justify-content: space-between;
+  justify-content: ${(props) =>
+    props.moredetails ? "center" : `space-between`};
   flex-direction: column;
   align-items: center;
 

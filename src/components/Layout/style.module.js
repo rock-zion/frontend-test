@@ -31,6 +31,7 @@ export const PagesLayoutStyles = styled.div`
     height: fit-content;
     padding: 64px 120px;
     background-color: #0d1116;
+    min-height: 100vh;
   }
 
   .movieContainerParent {
@@ -71,5 +72,37 @@ export const ButtonFavouriteLayoutStyle = styled.div`
   width: 100%;
   button {
     width: 80%;
+  }
+`;
+
+export const MoreDetailsLayoutStyle = styled(PagesLayoutStyles)`
+  .headingText {
+    color: #ffe300;
+    margin-bottom: 16px;
+  }
+
+  .childrenInner {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 400px 1fr;
+    column-gap: 32px;
+    color: white;
+    height: calc(100vh - 70px);
+  }
+
+  h1,
+  h2 {
+    margin-bottom: 16px;
+  }
+
+  h4 {
+    margin-bottom: 16px;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .childrenInner {
+      grid-template-columns: 1fr;
+      grid-gap: 24px;
+    }
   }
 `;
