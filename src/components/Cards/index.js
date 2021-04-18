@@ -15,8 +15,8 @@ export const MovieCard = ({ title, director, episode, seeMore }) => {
       <span className="detailsContainer">
         <div>
           <h1 className="headingText">{title}</h1>
-          {episode && <span className="episode">Episode {episode}</span>}
-          {director && <span className="director">Directed By:{director}</span>}
+          {episode && <span className="subTexts">Episode {episode}</span>}
+          {director && <span className="subTexts">Directed By:{director}</span>}
         </div>
         <ButtonFavouriteLayout resource="films" name={title} url={seeMore} />
       </span>
